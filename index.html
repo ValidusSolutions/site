@@ -32,7 +32,7 @@
   "description": "A small software consultancy offering technology advisory, architecture and design, custom development, modernization and team enablement.",
   "email": "contact@validussolutions.com",
   "slogan": "Strength by design",
-  "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Software developer, architect and speaker" },
+  "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Technology leader and architect", "image": "https://validussolutions.com/assets/michael-eaton.jpg" },
   "knowsAbout": ["Technology advisory", "Software architecture", "Custom software development", "Application modernization", "Engineering team enablement"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -113,7 +113,11 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .mail{display:block;margin-top:30px;font-family:var(--font-head);font-weight:600;font-size:clamp(20px,3vw,30px);color:var(--yellow);overflow-wrap:anywhere}
 footer{background:#001e3c;color:#8fa4bc;font-size:14px;padding-block:26px}
 footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.about .lead{margin:0 0 20px;font-size:18px;text-wrap:balance}.about strong{color:var(--navy)}
+.lead-card{display:flex;gap:24px;align-items:center;margin-bottom:24px}
+.portrait{flex:none;width:150px;height:150px;object-fit:cover;object-position:50% 18%;border-radius:14px;border-bottom:5px solid var(--yellow);background:#dce3ec}
+.about .lead{margin:0 0 6px;font-size:20px;font-family:var(--font-head);color:var(--navy)}
+.about .bio{font-size:16px;line-height:1.55;color:var(--ink)}
+@media(max-width:520px){.lead-card{flex-direction:column;align-items:flex-start}.portrait{width:120px;height:120px}}.about strong{color:var(--navy)}
 </style>
 </head>
 <body>
@@ -178,7 +182,13 @@ footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:
       <p class="lede">Validus is a small, focused consultancy. No layers, no hand-offs — just decades of hands-on experience applied directly to your problem.</p>
     </div>
     <div>
-      <p class="lead">Led by <strong>Michael Eaton</strong>, a software developer, architect and speaker. <!-- TODO: optional one-line bio / headshot --></p>
+      <div class="lead-card">
+        <img class="portrait" src="assets/michael-eaton.jpg" alt="Portrait of Michael Eaton" width="500" height="536">
+        <div>
+          <p class="lead">Led by <strong>Michael Eaton</strong></p>
+          <p class="bio">Technology leader and architect, designing secure, resilient, cloud-native solutions on Microsoft Azure. Michael bridges business strategy and technology execution, and is a conference speaker who mentors teams toward engineering excellence.</p>
+        </div>
+      </div>
       <div class="stats">
       <div class="stat"><b>30+</b><span>years building software</span></div>
       <div class="stat"><b>17</b><span>years speaking</span></div>
