@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Validus Solutions</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#002A54">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#002a54;--on-navy:#c9d5e3;--yellow:#fcb040;--font-head:'Sora',system-ui,sans-serif;--font-body:'Figtree',system-ui,sans-serif;--gutter:80px}
+@media(max-width:1024px){:root{--gutter:40px}}
+@media(max-width:640px){:root{--gutter:20px}}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;display:flex;flex-direction:column;font-family:var(--font-body);background:var(--navy);color:var(--on-navy);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.container{width:100%;max-width:1240px;margin:0 auto;padding-inline:var(--gutter)}
+.bar{padding-block:26px}
+.logo{position:relative;display:block;width:212px;height:66px}
+.logo svg{position:absolute;left:0;top:0;width:47px;height:66px}
+.logo .n{position:absolute;left:58px;top:6px;width:154px;height:37px;filter:brightness(0) invert(1)}
+.logo .s{position:absolute;left:87px;top:49.5px;width:97px;height:10.6px;filter:brightness(0) invert(1)}
+main{flex:1;position:relative;overflow:hidden;display:flex;align-items:center}
+.bleed{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:420px;height:588px;opacity:.9;pointer-events:none}
+@media(max-width:860px){.bleed{opacity:.15}}
+.copy{position:relative;padding-block:60px}
+.code{display:inline-block;border:1px solid #3f6590;color:var(--yellow);padding:8px 14px;border-radius:99px;margin-bottom:28px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+h1{font-family:var(--font-head);color:#fff;font-weight:700;font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.025em;margin:0;max-width:14ch}
+p{font-size:clamp(17px,1.6vw,20px);line-height:1.6;margin:26px 0 38px;max-width:480px}
+.btn{display:inline-block;font-weight:600;font-size:16px;line-height:1;padding:16px 30px;border-radius:6px;background:var(--yellow);color:var(--navy);transition:background .15s}
+.btn:hover{background:#ffc15e}
+footer{color:#8fa4bc;font-size:14px;padding-block:26px;background:#001e3c}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mark" viewBox="125 75 250 350"><g stroke-linejoin="round" stroke-width="3">
+<polygon fill="#FCB040" stroke="#FCB040" points="298.5,117 298.5,173 250,201 201.5,173 201.5,117 250,89"/>
+<polygon fill="#F68B1F" stroke="#F68B1F" points="237.9,222 237.9,278 189.4,306 140.9,278 140.9,222 189.4,194"/>
+<polygon fill="#F15E22" stroke="#F15E22" points="359.1,222 359.1,278 310.6,306 262.1,278 262.1,222 310.6,194"/>
+<polygon fill="#BF1E2E" stroke="#BF1E2E" points="298.5,327 298.5,383 250,411 201.5,383 201.5,327 250,299"/></g></symbol>
+</defs></svg>
+
+<header class="container bar">
+  <a class="logo" href="/" aria-label="Validus Solutions home">
+    <svg><use href="#mark"/></svg>
+    <img class="n" src="/assets/validus.png" alt="Validus" width="154" height="37">
+    <img class="s" src="/assets/solutions.png" alt="Solutions" width="97" height="11">
+  </a>
+</header>
+
+<main>
+  <svg class="bleed" aria-hidden="true"><use href="#mark"/></svg>
+  <div class="container copy">
+    <div class="code">Error 404</div>
+    <h1>We couldn’t find that page.</h1>
+    <p>The link may be old or mistyped. The whole site lives on one page, so the best place to start is the beginning.</p>
+    <a class="btn" href="/">Back to Validus Solutions</a>
+  </div>
+</main>
+
+<footer><div class="container">© 2026 Validus Solutions</div></footer>
+</body>
+</html>
