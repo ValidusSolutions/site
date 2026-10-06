@@ -7,9 +7,10 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#002A54">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
 :root{--navy:#002a54;--on-navy:#c9d5e3;--yellow:#fcb040;--font-head:'Sora',system-ui,sans-serif;--font-body:'Figtree',system-ui,sans-serif;--gutter:80px}
 @media(max-width:1024px){:root{--gutter:40px}}
@@ -35,6 +36,7 @@ p{font-size:clamp(17px,1.6vw,20px);line-height:1.6;margin:26px 0 38px;max-width:
 .btn{display:inline-block;font-weight:600;font-size:16px;line-height:1;padding:16px 30px;border-radius:6px;background:var(--yellow);color:var(--navy);transition:background .15s}
 .btn:hover{background:#ffc15e}
 footer{color:#8fa4bc;font-size:14px;padding-block:26px;background:#001e3c}
+footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yellow)}
 </style>
 </head>
 <body>
@@ -64,7 +66,8 @@ footer{color:#8fa4bc;font-size:14px;padding-block:26px;background:#001e3c}
   </div>
 </main>
 
-<footer><div class="container">© 2026 Validus Solutions</div></footer>
+<footer><div class="container">© <span class="js-year">2026</span> Validus Solutions · <a href="/privacy">Privacy</a></div></footer>
+<script>document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

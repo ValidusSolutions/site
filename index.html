@@ -18,9 +18,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#002A54">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,6 +126,7 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 @media(max-width:560px){.cform button{justify-self:stretch}}
 footer{background:#001e3c;color:#8fa4bc;font-size:14px;padding-block:26px}
 footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yellow)}
 .lead-card{display:flex;gap:24px;align-items:center;margin-bottom:24px}
 .portrait{flex:none;width:150px;height:150px;object-fit:cover;object-position:50% 18%;border-radius:14px;border-bottom:5px solid var(--yellow);background:#dce3ec}
 .about .lead{margin:0 0 6px;font-size:20px;font-family:var(--font-head);color:var(--navy)}
@@ -265,7 +267,8 @@ footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:
 })();
 </script>
 </main>
-<footer><div class="container"><span>© 2026 Validus Solutions</span><span>Strength by design</span></div></footer>
+<footer><div class="container"><span>© <span class="js-year">2026</span> Validus Solutions</span><span>Strength by design · <a href="/privacy">Privacy</a></span></div></footer>
+<script>document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
