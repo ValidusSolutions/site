@@ -16,6 +16,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@validussol">
 <meta name="theme-color" content="#002A54">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -32,7 +33,8 @@
   "image": "https://validussolutions.com/assets/og.png",
   "description": "A small consultancy offering Azure cloud architecture, technology advisory, custom development, modernization and team enablement.",
   "slogan": "Strength by design",
-  "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Technology leader and architect", "image": "https://validussolutions.com/assets/michael-eaton.jpg" },
+  "sameAs": ["https://x.com/validussol"],
+  "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Technology leader and architect", "image": "https://validussolutions.com/assets/michael-eaton.jpg", "url": "https://mjeaton.net/", "sameAs": ["https://www.linkedin.com/in/mjeaton", "https://mjeaton.net/"] },
   "knowsAbout": ["Microsoft Azure", "Cloud architecture", "Cloud migration", "Technology advisory", "Software architecture", "Custom software development", "Application modernization", "DevOps", "Engineering team enablement"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -131,6 +133,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
 .portrait{flex:none;width:150px;height:150px;object-fit:cover;object-position:50% 18%;border-radius:14px;border-bottom:5px solid var(--yellow);background:#dce3ec}
 .about .lead{margin:0 0 6px;font-size:20px;font-family:var(--font-head);color:var(--navy)}
 .about .bio{font-size:16px;line-height:1.55;color:var(--ink)}
+.about .links{margin-top:10px;font-size:15px;color:var(--muted)}.about .links a{color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}.about .links a:hover{color:var(--red)}
 @media(max-width:520px){.lead-card{flex-direction:column;align-items:flex-start}.portrait{width:120px;height:120px}}.about strong{color:var(--navy)}
 </style>
 </head>
@@ -201,6 +204,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
         <div>
           <p class="lead">Led by <strong>Michael Eaton</strong></p>
           <p class="bio">Technology leader and architect, designing secure, resilient, cloud-native solutions on Microsoft Azure. Michael bridges business strategy and technology execution, and is a conference speaker who mentors teams toward engineering excellence.</p>
+          <p class="links"><a href="https://mjeaton.net/" rel="me noopener">mjeaton.net</a> · <a href="https://www.linkedin.com/in/mjeaton" rel="me noopener">LinkedIn</a></p>
         </div>
       </div>
       <div class="stats">
@@ -267,7 +271,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
 })();
 </script>
 </main>
-<footer><div class="container"><span>© <span class="js-year">2026</span> Validus Solutions</span><span>Strength by design · <a href="/privacy">Privacy</a></span></div></footer>
+<footer><div class="container"><span>© <span class="js-year">2026</span> Validus Solutions</span><span>Strength by design · <a href="https://x.com/validussol" rel="noopener">X (@validussol)</a> · <a href="/privacy">Privacy</a></span></div></footer>
 <script>document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
