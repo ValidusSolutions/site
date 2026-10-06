@@ -30,7 +30,6 @@
   "logo": "https://validussolutions.com/assets/og.png",
   "image": "https://validussolutions.com/assets/og.png",
   "description": "A small consultancy offering Azure cloud architecture, technology advisory, custom development, modernization and team enablement.",
-  "email": "contact@validussolutions.com",
   "slogan": "Strength by design",
   "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Technology leader and architect", "image": "https://validussolutions.com/assets/michael-eaton.jpg" },
   "knowsAbout": ["Microsoft Azure", "Cloud architecture", "Cloud migration", "Technology advisory", "Software architecture", "Custom software development", "Application modernization", "DevOps", "Engineering team enablement"],
@@ -110,7 +109,20 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .contact{background:var(--navy);color:var(--on-navy);text-align:center;position:relative;overflow:hidden}
 .contact h2{color:#fff}
 .contact .lede{margin:22px auto 36px;max-width:560px}
-.mail{display:block;margin-top:30px;font-family:var(--font-head);font-weight:600;font-size:clamp(20px,3vw,30px);color:var(--yellow);overflow-wrap:anywhere}
+.cform{max-width:640px;margin:0 auto;text-align:left;display:grid;gap:18px}
+.cform__row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:560px){.cform__row{grid-template-columns:1fr}}
+.cform label{display:grid;gap:8px;font-size:15px;font-weight:600;color:#fff}
+.cform .opt{font-weight:400;color:var(--on-navy)}
+.cform input,.cform textarea{font:inherit;font-weight:400;font-size:16px;color:#fff;background:rgba(255,255,255,.06);border:1px solid #3f6590;border-radius:8px;padding:13px 14px;width:100%}
+.cform textarea{resize:vertical;min-height:130px}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(252,176,64,.25)}
+.cform button{justify-self:start;cursor:pointer;font-family:inherit}
+.cform button:disabled{opacity:.7;cursor:wait}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.cform__status{font-size:16px;color:var(--yellow);min-height:1.4em}
+.cform__status.is-error{color:#ff9d8a}
+@media(max-width:560px){.cform button{justify-self:stretch}}
 footer{background:#001e3c;color:#8fa4bc;font-size:14px;padding-block:26px}
 footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .lead-card{display:flex;gap:24px;align-items:center;margin-bottom:24px}
@@ -203,10 +215,55 @@ footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:
     <div class="eyebrow" style="color:var(--yellow)">Contact</div>
     <h2 class="h2">Let’s talk about what you’re building.</h2>
     <p class="lede">Send a short note about your project or challenge. You’ll hear back from a real person, not a ticket queue — usually within one business day.</p>
-    <a class="btn btn--y" href="mailto:contact@validussolutions.com?subject=Hello%20from%20your%20website">Email Validus</a>
-    <a class="mail" href="mailto:contact@validussolutions.com">contact@validussolutions.com</a>
+    <form class="cform" id="cform" action="https://formspree.io/f/xnpjjpvq" method="POST">
+      <div class="cform__row">
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label><span>Company <span class="opt">(optional)</span></span><input name="company" type="text" autocomplete="organization"></label>
+      <label>How can we help?<textarea name="message" rows="5" required></textarea></label>
+      <input type="hidden" name="_subject" value="New inquiry from validussolutions.com">
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn--y" type="submit">Send message</button>
+      <p class="cform__status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
+<script>
+(function () {
+  var form = document.getElementById('cform');
+  var status = form.querySelector('.cform__status');
+  var button = form.querySelector('button');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.className = 'cform__status';
+    status.textContent = '';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (res.ok) {
+          form.reset();
+          form.classList.add('is-sent');
+          status.textContent = 'Thanks — your message is on its way. We’ll be in touch within one business day.';
+          return;
+        }
+        return res.json().then(function (data) {
+          var msg = data && data.errors ? data.errors.map(function (x) { return x.message; }).join(' ') : '';
+          throw new Error(msg);
+        });
+      })
+      .catch(function (err) {
+        status.className = 'cform__status is-error';
+        status.textContent = (err && err.message ? err.message + ' ' : '') + 'Sorry, something went wrong sending your message. Please try again in a moment.';
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.textContent = 'Send message';
+      });
+  });
+})();
+</script>
 </main>
 <footer><div class="container"><span>© 2026 Validus Solutions</span><span>Strength by design</span></div></footer>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
