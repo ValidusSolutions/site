@@ -103,11 +103,15 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 @media(max-width:860px){.about .grid{grid-template-columns:1fr;gap:36px}}
 .about .lede{margin:22px 0 0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .stat{background:#fff;border-radius:12px;padding:28px 20px;text-align:center;border-top:4px solid var(--yellow)}
 .stat:nth-child(2){border-color:var(--orange)}.stat:nth-child(3){border-color:var(--vermilion)}
 .stat b{display:block;font-family:var(--font-head);font-size:clamp(30px,4vw,44px);color:var(--navy)}
 .stat span{font-size:14px;color:var(--muted)}
+.stat b.stat__text{font-size:clamp(18px,1.8vw,22px);line-height:1.2;padding-block:6px 8px}
+.stat--link{display:block;text-decoration:none;transition:box-shadow .2s,transform .2s}.stat--link:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,42,84,.12)}.stat--link:hover span{color:var(--navy)}
+.about .industries{margin-top:16px;font-size:16px;color:var(--muted)}
+
 
 .contact{background:var(--navy);color:var(--on-navy);text-align:center;position:relative;overflow:hidden}
 .contact h2{color:#fff}
@@ -135,6 +139,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
 .about .bio{font-size:16px;line-height:1.55;color:var(--ink)}
 .about .links{margin-top:10px;font-size:15px;color:var(--muted)}.about .links a{color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}.about .links a:hover{color:var(--red)}
 @media(max-width:520px){.lead-card{flex-direction:column;align-items:flex-start}.portrait{width:120px;height:120px}}.about strong{color:var(--navy)}
+@media(max-width:520px){.stats{gap:10px}.stat{padding:22px 8px}.stat b.stat__text{font-size:14px;letter-spacing:-.01em}}
 </style>
 </head>
 <body>
@@ -197,6 +202,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
       <div class="eyebrow">About</div>
       <h2 class="h2">Senior experience, <span style="white-space:nowrap">small-firm</span> attention.</h2>
       <p class="lede">Validus is a small, focused consultancy. No layers, no hand-offs — just decades of hands-on experience applied directly to your problem.</p>
+      <p class="industries">Experience across healthcare, insurance, finance and manufacturing.</p>
     </div>
     <div>
       <div class="lead-card">
@@ -209,8 +215,8 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
       </div>
       <div class="stats">
       <div class="stat"><b>30+</b><span>years building software</span></div>
-      <div class="stat"><b>17</b><span>years speaking</span></div>
-      <div class="stat"><b>200+</b><span>conference sessions</span></div>
+      <div class="stat"><b class="js-speaking-years">18</b><span>years as a conference speaker</span></div>
+      <a class="stat stat--link" href="https://mjeaton.net/speaking" rel="noopener"><b class="stat__text">Talks &amp; workshops</b><span>see the list <span aria-hidden="true">→</span></span></a>
       </div>
     </div>
   </div>
@@ -272,6 +278,7 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
 </script>
 </main>
 <footer><div class="container"><span>© <span class="js-year">2026</span> Validus Solutions</span><span>Strength by design · <a href="https://x.com/validussol" rel="noopener">X (@validussol)</a> · <a href="/privacy">Privacy</a></span></div></footer>
+<script>document.querySelectorAll('.js-speaking-years').forEach(function (el) { el.textContent = new Date().getFullYear() - 2008; });</script>
 <script>document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
