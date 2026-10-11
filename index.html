@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Validus Solutions — Azure Architecture & Technology Advisory</title>
-<meta name="description" content="Small consultancy for Azure cloud architecture, technology advisory, custom development and modernization. Senior experience, small-firm attention.">
+<title>Validus Solutions — Fractional CTO &amp; Azure Architecture</title>
+<meta name="description" content="Fractional CTO leadership, Azure architecture, .NET development and modernization for teams on the Microsoft stack, especially where security, reliability and compliance matter.">
 <link rel="canonical" href="https://validussolutions.com/">
 <meta name="msvalidate.01" content="E839CEF3F35D40A292EE7AFA92074F50" />
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Validus Solutions">
-<meta property="og:title" content="Validus Solutions — Azure Architecture &amp; Technology Advisory">
-<meta property="og:description" content="Senior experience, small-firm attention. Azure cloud architecture, technology advisory, development and modernization.">
+<meta property="og:title" content="Validus Solutions — Fractional CTO &amp; Azure Architecture">
+<meta property="og:description" content="Fractional CTO leadership, Azure architecture and hands-on .NET delivery for teams where security, reliability and compliance matter.">
 <meta property="og:url" content="https://validussolutions.com/">
 <meta property="og:image" content="https://validussolutions.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -31,11 +31,11 @@
   "url": "https://validussolutions.com/",
   "logo": "https://validussolutions.com/assets/og.png",
   "image": "https://validussolutions.com/assets/og.png",
-  "description": "A small consultancy offering Azure cloud architecture, technology advisory, custom development, modernization and team enablement.",
+  "description": "A small consultancy offering fractional CTO leadership, Azure cloud architecture, custom development, modernization and team enablement for teams on the Microsoft stack.",
   "slogan": "Strength by design",
   "sameAs": ["https://x.com/validussol"],
   "founder": { "@type": "Person", "name": "Michael Eaton", "jobTitle": "Technology leader and architect", "image": "https://validussolutions.com/assets/michael-eaton.jpg", "url": "https://mjeaton.net/", "sameAs": ["https://www.linkedin.com/in/mjeaton", "https://mjeaton.net/"] },
-  "knowsAbout": ["Microsoft Azure", "Cloud architecture", "Cloud migration", "Technology advisory", "Software architecture", "Custom software development", "Application modernization", "DevOps", "Engineering team enablement"],
+  "knowsAbout": ["Fractional CTO", "Microsoft Azure", ".NET", "Microsoft Entra ID", "AI-assisted software development", "Cloud architecture", "Cloud migration", "Technology advisory", "Software architecture", "Custom software development", "Application modernization", "DevOps", "Engineering team enablement"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services",
@@ -98,21 +98,42 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .row b{font-family:var(--font-head);font-size:15px;color:var(--red)}
 .row h3{font-size:24px}.row p{font-size:16px;line-height:1.55}
 @media(max-width:700px){.row{grid-template-columns:44px 1fr;gap:6px 16px}.row p{grid-column:2}}
+.ai{background:var(--panel)}
+.ai .lede{margin-top:22px;max-width:720px}
+.ai-steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.ai-step{padding-top:20px;border-top:2px solid var(--navy)}
+.ai-step b{font-family:var(--font-head);font-size:15px;color:var(--red)}
+.ai-step h3{font-size:22px;margin-top:8px}
+.ai-step p{margin-top:8px;font-size:16px;line-height:1.55}
+.ai-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:48px}
+.ai-point{background:#fff;border-radius:12px;padding:28px;border-top:4px solid var(--yellow)}
+.ai-point:nth-child(2){border-color:var(--orange)}
+.ai-point h3{font-size:20px;line-height:1.25}
+.ai-point p{margin-top:10px;font-size:16px;line-height:1.55}
+@media(max-width:1024px){.ai-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.ai-steps,.ai-points{grid-template-columns:1fr}}
+.works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:48px}
+.work__tag{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.work-feat{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;align-items:start;background:var(--navy);color:var(--on-navy);border-radius:12px;padding:44px 40px}
+.work-feat p{font-size:17px;line-height:1.6}
+.work-feat .work__tag{font-size:13px;color:var(--yellow)}
+.work-feat h3{color:#fff;font-size:clamp(24px,2.6vw,32px);line-height:1.2;margin-top:12px}
+.work-feat .work-feat__result{margin-top:14px;font-weight:600;color:#fff}
+.work-feat .work-feat__ctx{margin-top:16px;font-size:14px;color:#9fb3c8}
+.work-card{display:flex;flex-direction:column;gap:10px;background:var(--panel);border-radius:12px;padding:28px;border-left:4px solid var(--orange)}
+.work-card:last-child{border-left-color:var(--vermilion)}
+.work-card h3{font-size:21px;line-height:1.25}
+.work-card p{font-size:16px;line-height:1.55}
+.work-card .work__tag{font-size:13px}
+.work-card .work-card__result{font-weight:600;color:var(--navy)}
+.work-card .work-card__ctx{margin-top:auto;padding-top:6px;font-size:14px;color:var(--muted)}
+@media(max-width:900px){.works,.work-feat{grid-template-columns:1fr}.work-feat{gap:16px;padding:32px 24px}}
 
 .about{background:var(--panel)}
 .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 @media(max-width:860px){.about .grid{grid-template-columns:1fr;gap:36px}}
 .about .lede{margin:22px 0 0}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.stat{background:#fff;border-radius:12px;padding:28px 20px;text-align:center;border-top:4px solid var(--yellow)}
-.stat:nth-child(2){border-color:var(--orange)}.stat:nth-child(3){border-color:var(--vermilion)}
-.stat b{display:block;font-family:var(--font-head);font-size:clamp(30px,4vw,44px);color:var(--navy)}
-.stat span{font-size:14px;color:var(--muted)}
-.stat b.stat__text{font-size:clamp(18px,1.8vw,22px);line-height:1.2;padding-block:6px 8px}
-.stat--link{display:block;text-decoration:none;transition:box-shadow .2s,transform .2s}.stat--link:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,42,84,.12)}.stat--link:hover span{color:var(--navy)}
 .about .industries{margin-top:16px;font-size:16px;color:var(--muted)}
-
-
 .contact{background:var(--navy);color:var(--on-navy);text-align:center;position:relative;overflow:hidden}
 .contact h2{color:#fff}
 .contact .lede{margin:22px auto 36px;max-width:560px}
@@ -133,13 +154,12 @@ a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 footer{background:#001e3c;color:#8fa4bc;font-size:14px;padding-block:26px}
 footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yellow)}
-.lead-card{display:flex;gap:24px;align-items:center;margin-bottom:24px}
+.lead-card{display:flex;gap:24px;align-items:center}
 .portrait{flex:none;width:150px;height:150px;object-fit:cover;object-position:50% 18%;border-radius:14px;border-bottom:5px solid var(--yellow);background:#dce3ec}
 .about .lead{margin:0 0 6px;font-size:20px;font-family:var(--font-head);color:var(--navy)}
 .about .bio{font-size:16px;line-height:1.55;color:var(--ink)}
 .about .links{margin-top:10px;font-size:15px;color:var(--muted)}.about .links a{color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}.about .links a:hover{color:var(--red)}
 @media(max-width:520px){.lead-card{flex-direction:column;align-items:flex-start}.portrait{width:120px;height:120px}}.about strong{color:var(--navy)}
-@media(max-width:520px){.stats{gap:10px}.stat{padding:22px 8px}.stat b.stat__text{font-size:14px;letter-spacing:-.01em}}
 </style>
 </head>
 <body>
@@ -163,14 +183,14 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
       <img class="s" src="assets/solutions.png" alt="Solutions" width="97" height="11">
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="#about">About</a><a href="#services">Services</a>
+      <a href="#services">Services</a><a href="#ai">AI</a><a href="#work">Work</a><a href="#about">About</a>
       <a class="btn btn--y" href="#contact">Contact</a>
     </nav>
   </div>
   <div class="container hero__copy" id="top">
     <div class="pill">Strength by design</div>
     <h1>Software that stands up to the real world.</h1>
-    <p class="lede">Validus Solutions helps teams make sound technology decisions and build software that lasts. Azure cloud architecture, modernization and engineering leadership, from strategy through shipped code.</p>
+    <p class="lede">Fractional technical leadership, Azure architecture and hands-on .NET delivery for teams on the Microsoft stack, especially where security, reliability and compliance can’t be an afterthought. Sound technology decisions and software that lasts, from strategy through shipped code.</p>
     <div class="btn-row">
       <a class="btn btn--y" href="#contact">Start a conversation</a>
       <a class="btn btn--g" href="#services">See what we do</a>
@@ -187,11 +207,70 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
       <p>Five ways to work together, from a single advisory session to a full engagement.</p>
     </div>
     <div class="main">
-      <div class="row"><b>01</b><h3>Technology Advisory</h3><p>Independent architecture reviews, Azure roadmaps you can act on, and part-time CTO-level guidance when you need senior leadership without a full-time hire.</p></div>
+      <div class="row"><b>01</b><h3>Technology Advisory</h3><p>Independent architecture reviews, Azure roadmaps you can act on, and fractional CTO leadership when you need a senior technologist without a full-time hire, including practical guidance on bringing AI into your engineering team.</p></div>
       <div class="row"><b>02</b><h3>Architecture &amp; Design</h3><p>Secure, resilient, cloud-native designs on Azure, including microservices and event-driven systems, sized to your team, budget and compliance needs.</p></div>
-      <div class="row"><b>03</b><h3>Custom Development</h3><p>Well-built, well-tested software delivered by someone who has shipped it for decades.</p></div>
+      <div class="row"><b>03</b><h3>Custom Development</h3><p>Well-built, well-tested .NET and Azure software from someone who has shipped it for decades, now delivered with AI-assisted development and the same testing and review discipline.</p></div>
       <div class="row"><b>04</b><h3>Modernization</h3><p>Step-by-step migration to Azure that keeps the business running — modernizing what you have instead of risking a full rewrite.</p></div>
-      <div class="row"><b>05</b><h3>Team Enablement</h3><p>DevOps practices, workshops and mentoring that speed delivery and raise your engineers' skills.</p></div>
+      <div class="row"><b>05</b><h3>Team Enablement</h3><p>DevOps practices, workshops and mentoring that speed delivery and raise your engineers' skills, including how to use AI coding tools without lowering the bar on quality.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section ai" id="ai">
+  <div class="container">
+    <div class="eyebrow">AI in practice</div>
+    <h2 class="h2">AI that speeds delivery without lowering the bar.</h2>
+    <p class="lede">We use AI every day, with Claude Code, GitHub Copilot and Codex. It makes the work faster, but people stay accountable for every decision.</p>
+    <ol class="ai-steps">
+      <li class="ai-step"><b>01</b><h3>Research</h3><p>AI reads the documents and data and distills what matters. People make the decisions.</p></li>
+      <li class="ai-step"><b>02</b><h3>Plan</h3><p>A person drives the plan, with AI assisting, and a person reviews it before any code is written.</p></li>
+      <li class="ai-step"><b>03</b><h3>Build</h3><p>AI helps carry out the approved plan, including the tests and documentation.</p></li>
+      <li class="ai-step"><b>04</b><h3>Verify</h3><p>A person always verifies what was written. AI can help review, but never has the final word.</p></li>
+    </ol>
+    <div class="ai-points">
+      <div class="ai-point">
+        <h3>Adoption that sticks</h3>
+        <p>Helping engineers move past both the hype and the skepticism: choosing tools, setting conventions and building review habits so AI output is code you’d ship.</p>
+      </div>
+      <div class="ai-point">
+        <h3>Guardrails that fit your risk</h3>
+        <p>Deciding what code and data AI tools can see, and putting sensible policies around their use, where security and compliance can’t be an afterthought.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section work" id="work">
+  <div class="container">
+    <div class="eyebrow">Selected work</div>
+    <h2 class="h2">Problems solved, results that held up.</h2>
+    <div class="works">
+      <article class="work-feat">
+        <div>
+          <p class="work__tag">Cloud migration · Leadership · Advisory</p>
+          <h3>Migration, interim leadership and a trusted seat with the CIO</h3>
+        </div>
+        <div>
+          <p>Joined a global test-equipment rental company’s Azure Landing Zone migration when it was at least two months behind schedule, with the application team struggling to move everything to the new Landing Zone. Led the fully remote development team until a permanent manager was hired, while staying hands-on with Azure Functions, DevOps and .NET integration. Along the way, became a trusted advisor to the CIO on architecture and team structure, and helped interview candidates for the permanent role.</p>
+          <p class="work-feat__result">The two-month gap was closed, and the migration was back on schedule.</p>
+          <p class="work-feat__ctx">Previous consulting role</p>
+        </div>
+      </article>
+      <article class="work-card">
+        <p class="work__tag">Insurance · AI-assisted</p>
+        <h3>A suite of SaaS products for benefits administration</h3>
+        <p>Joined as the first senior engineer, on a team that has since grown to five senior engineers and a business analyst. Building multi-tenant SaaS applications for TPAs and brokers, covering eligibility, payroll, tax withholding and client self-service, along with the security underneath: Entra ID sign-in, permissions, tenant isolation and audit trails.</p>
+        <p class="work-card__result">With AI-assisted development, that small team has delivered 16 major product capabilities in about seven months, with more to come.</p>
+        <p class="work-card__ctx">Current work</p>
+      </article>
+      <article class="work-card">
+        <p class="work__tag">Healthcare · Assessment</p>
+        <h3>An assessment that became the roadmap</h3>
+        <p>Brought in by a national healthcare regulatory organization to plan how to merge two APIs and standardize authentication. The assessment also found more than a dozen NuGet packages with critical vulnerabilities, another dozen several versions behind, and a Node.js version several major releases out of date.</p>
+        <p>The plan put security and stability first, then the requested work, with an estimate, the skill sets needed and a process for keeping dependencies current.</p>
+        <p class="work-card__result">Two weeks of close collaboration led to a multi-month engagement to secure and stabilize the system.</p>
+        <p class="work-card__ctx">Previous consulting role</p>
+      </article>
     </div>
   </div>
 </section>
@@ -202,21 +281,16 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
       <div class="eyebrow">About</div>
       <h2 class="h2">Senior experience, <span style="white-space:nowrap">small-firm</span> attention.</h2>
       <p class="lede">Validus is a small, focused consultancy. No layers, no hand-offs — just decades of hands-on experience applied directly to your problem.</p>
-      <p class="industries">Experience across healthcare, insurance, finance and manufacturing.</p>
+      <p class="industries">Experience across healthcare, health benefits and insurance, state government, manufacturing and consumer goods.</p>
     </div>
     <div>
       <div class="lead-card">
         <img class="portrait" src="assets/michael-eaton.jpg" alt="Portrait of Michael Eaton" width="500" height="536">
         <div>
           <p class="lead">Led by <strong>Michael Eaton</strong></p>
-          <p class="bio">Technology leader and architect, designing secure, resilient, cloud-native solutions on Microsoft Azure. Michael bridges business strategy and technology execution, and is a conference speaker who mentors teams toward engineering excellence.</p>
-          <p class="links"><a href="https://mjeaton.net/" rel="me noopener">mjeaton.net</a> · <a href="https://www.linkedin.com/in/mjeaton" rel="me noopener">LinkedIn</a></p>
+          <p class="bio">Technology leader and architect with 30+ years of building software, designing secure, resilient, cloud-native solutions on Microsoft Azure. Michael bridges business strategy and technology execution, and mentors teams toward engineering excellence.</p>
+          <p class="links">More about Michael: <a href="https://mjeaton.net/" rel="me noopener">mjeaton.net</a> · <a href="https://www.linkedin.com/in/mjeaton" rel="me noopener">LinkedIn</a></p>
         </div>
-      </div>
-      <div class="stats">
-      <div class="stat"><b>30+</b><span>years building software</span></div>
-      <div class="stat"><b class="js-speaking-years">18</b><span>years as a conference speaker</span></div>
-      <a class="stat stat--link" href="https://mjeaton.net/speaking" rel="noopener"><b class="stat__text">Talks &amp; workshops</b><span>see the list <span aria-hidden="true">→</span></span></a>
       </div>
     </div>
   </div>
@@ -278,7 +352,6 @@ footer a{color:#8fa4bc;text-decoration:underline}footer a:hover{color:var(--yell
 </script>
 </main>
 <footer><div class="container"><span>© <span class="js-year">2026</span> Validus Solutions</span><span>Strength by design · <a href="https://x.com/validussol" rel="noopener">X (@validussol)</a> · <a href="/privacy">Privacy</a></span></div></footer>
-<script>document.querySelectorAll('.js-speaking-years').forEach(function (el) { el.textContent = new Date().getFullYear() - 2008; });</script>
 <script>document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e3b4ad046164b7d8126bd75b05d38b9"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
